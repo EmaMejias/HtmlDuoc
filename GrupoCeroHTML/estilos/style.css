@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #049cd4;
+    background-color: rgb(139, 32, 201);
   }
 
 .formulario{
@@ -14,33 +14,33 @@ body{
 
 }
   
-.form-register {
-  width: 400px;
-  background-color: #24303c;
-  padding: 30px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 4px;
-  color: white;
-  box-shadow: 7px 13px 37px #000;
-}
+  .form-register {
+    width: 400px;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
   
-.form-register h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  background: #24303c;
-  text-align: center;
-}
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: #24303c;
+    text-align: center;
+  }
   
-.datos {
-  width: 70%;
-  background: #24303c;
-  padding: 5px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #1f53c5;
-  font-size: 18px;
-  color: white;
+  .datos {
+    width: 70%;
+    background: #24303c;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    color: white;
   }
   
   .form-register p {
@@ -84,6 +84,8 @@ body{
     margin: 16px 0;
     font-size: 16px;
   }
+  
+  
   
   select{
     width: 100%;
