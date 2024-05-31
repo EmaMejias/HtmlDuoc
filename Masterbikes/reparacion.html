@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Masterbikes.cl</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/styles.css'>
+    <script src='js/reparacion.js'></script>
+</head>
+<body>
+    <!-- Barra de Navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-light h-75 pl-4 pr-4" style="background-color: #ffffff;">
+    <a id="txt1" class="navbar-brand" href="PaginaPrincipal.html" >
+      <img src="images/masterbike_claro.jpg" width="50" height="50" class="d-inline-block align-top">
+      Masterbikes
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a id="txt2" class="nav-link" href="SobreNosotros.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a id="txt2" class="nav-link" href="Galeria.html">Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a id="txt2" class="nav-link" href="Formulario.html">Registrate</a>
+        </li>
+        <li class="nav-item">
+          <a id="txt2" class="nav-link" href="reparacion.html">Reparacion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row mb-5 p-5 text-center">
+        <div class="col col-2"></div>
+        <div class="col col-8 fs-3" style=" text-align:justify;">
+            <h4 id="txt3" class="text-center fw-bold">Solicitud de Reparacion</h4>
+            <p id="txt4">¿Buscas que tu bicicleta quede como nueva? Envianos tu solicitud 
+                rellenando el formulario para agendar 
+                </p>
+        </div>
+        <div class="col col-2"></div>
+    </div>
+</div>
+    <!-- Formulario Solicitud Reparacion -->
+    <div class="container-fluid">
+
+    <form class="row g-3 mb-5 p-5 needs-validation " style="background-color:rgb(255, 255, 255) ;"  novalidate>
+      <h4 id="txt3" class="text-center ">Solicitud</h4>
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col-6 center-block">
+            <label id="txt4" for="validationCustom01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01"  required>
+            <div class="valid-feedback">
+              ¡Ok!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, Ingresa un Nombre.
+            </div>
+          </div>
+          <div class="col-6">
+            <label id="txt4" for="validationCustom02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02"  required>
+            <div class="valid-feedback">
+              ¡Ok!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, Ingresa un Apellido.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="validationCustomUsername" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"></span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="valid-feedback">
+                ¡Ok!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, Ingresa un Email.
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="validationCustomUsername" class="form-label">Celular</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">+569</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="valid-feedback">
+                ¡Ok!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, Ingresa un Celular.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label  for="validationCustom03" class="form-label">Comuna</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected value=""></option>
+              <option value="1">Arica y Parinacota</option>
+              <option value="2">Tarapacá</option>
+              <option value="3">Antofagasta</option>
+              <option value="4">Atacama</option>
+              <option value="5">Coquimbo</option>
+              <option value="6">Valparaíso</option>
+              <option value="7">Metropolitana de Santiago</option>
+              <option value="8">Libertador General Bernardo O'Higgins</option>
+              <option value="9">Maule</option>
+              <option value="10">Ñuble</option>
+              <option value="11">Biobío</option>
+              <option value="12">Araucanía</option>
+              <option value="13">Los Ríos</option>
+              <option value="14">Los Lagos</option>
+              <option value="15">Aysén del General Carlos Ibáñez del Campo</option>
+              <option value="16">Magallanes y de la Antártica Chilena</option>
+            </select>
+            <div class="valid-feedback">
+              ¡Ok!
+            </div>
+            <div class="invalid-feedback">
+              Proporciona una Region válida.
+            </div>
+          </div>
+          <div class="col">
+            <label for="validationCustom04" class="form-label">Comuna</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected value=""></option>
+              <optgroup label="Comunas de Santiago">
+                <option value="1">Santiago</option>
+                <option value="2">Cerrillos</option>
+                <option value="3">Cerro Navia</option>
+                <option value="4">Conchalí</option>
+                <option value="5">El Bosque</option>
+                <option value="6">Estación Central</option>
+                <option value="7">Huechuraba</option>
+                <option value="8">Independencia</option>
+                <option value="9">La Cisterna</option>
+                <option value="10">La Florida</option>
+                <option value="11">La Granja</option>
+                <option value="12">La Pintana</option>
+                <option value="13">La Reina</option>
+                <option value="14">Las Condes</option>
+                <option value="15">Lo Barnechea</option>
+                <option value="16">Lo Espejo</option>
+                <option value="17">Lo Prado</option>
+                <option value="18">Macul</option>
+                <option value="19">Maipú</option>
+                <option value="20">Ñuñoa</option>
+                <option value="21">Pedro Aguirre Cerda</option>
+                <option value="22">Peñalolén</option>
+                <option value="23">Providencia</option>
+                <option value="24">Pudahuel</option>
+                <option value="25">Quilicura</option>
+                <option value="26">Quinta Normal</option>
+                <option value="27">Recoleta</option>
+                <option value="28">Renca</option>
+                <option value="29">San Joaquín</option>
+                <option value="30">San Miguel</option>
+                <option value="31">San Ramón</option>
+                <option value="32">Vitacura</option>
+              </optgroup>
+            </select>
+            <div class="valid-feedback">
+              ¡Ok!
+            </div>
+            <div class="invalid-feedback">
+              Proporciona una Comuna válida.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="validationCustom04" class="form-label">Servicios</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected value="">Servicios</option>
+              <option value="1">Cambio de Aceite</option>
+              <option value="2">Remplazo de Bateria</option>
+              <option value="3">Mantención Preventiva</option>
+              <option value="4">Sistemas Eléctricos</option>
+              <option value="5">Alineación y Balanceo de Ruedas</option>
+              <option value="6">Cambio de Filtro</option>
+            </select>
+            <div class="valid-feedback">
+              ¡Ok!
+            </div>
+            <div class="invalid-feedback">
+              Selecciona un estado válido.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="validationCustom05" class="form-label">Comentario</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+          <div class="valid-feedback">
+            ¡Ok!
+          </div>
+          <div class="invalid-feedback">
+            Proporciona un código postal válido.
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepta los términos y condiciones
+            </label>
+            <div class="invalid-feedback">
+              Debe estar de acuerdo antes de enviar.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" type="submit">Enviar formulario</button>
+        </div>
+      </div>
+      <div class="col-3"></div>
+  </form>
+</div>
+
+
+
+
+  <!-- Footer de la pagina -->
+  <footer class="text-center bg-body-tertiary" style="background-color: #727071;">
+    <!-- Grid container -->
+    <div class="container pt-3" >
+      <!-- Section: Social media -->
+      <section class="mb-3">
+        <!-- Facebook -->
+        <a data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="" 
+          role="button" data-mdb-ripple-color="dark">
+          <i class="fa fa-facebook-f"></i>
+        </a>
+          <!-- Twitter -->
+        <a data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://twitter.com/elonmusk"
+          role="button" data-mdb-ripple-color="dark">
+          <i class="fa fa-twitter"></i>
+        </a>
+          <!-- Instagram -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href=""
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href=""
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <!-- Github -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href=""
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-github"></i
+          ></a>
+        </section>
+      </div>
+      <!-- Copyright -->
+      <div id="txt1" class="text-center p-3" style="background-color: #ffffff;">
+        © 2024 Copyright:
+        <a id="txt2" class="nav-link" href="PaginaPrincipal.html">Masterbikes.cl</a>
+      </div>
+    </footer>
+    
+
+    <!-- Script Bootstarp -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
