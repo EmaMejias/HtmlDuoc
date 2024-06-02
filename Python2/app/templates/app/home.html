@@ -1,0 +1,65 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="productos">
+            
+    <div class="producto">
+        <div class="contenedor">
+            <img src="{% static 'app/img/productos/sail.jpg' %}" alt="chevrolet">
+            <div class="detalles">
+                <h5>CHEVROLET</h5>
+                <h2>Sail</h2>
+                <h3>$17.990.990</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <div class="contenedor">
+            <img src="{% static 'app/img/productos/camaro.jpg' %}" alt="auto">
+            <div class="detalles">
+                <h5>CHEVROLET</h5>
+                <h2>Camaro</h2>
+                <h3>$25.390.990</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <div class="contenedor">
+            <img src="{% static 'app/img/productos/ford.jpg' %}" alt="auto">
+            <div class="detalles">
+                <h5>FORD</h5>
+                <h2>Mustang</h2>
+                <h3>$26.790.990</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <div class="contenedor">
+            <img src="{% static 'app/img/productos/cherry.jpg' %}" alt="auto">
+            <div class="detalles">
+                <h5>CHERRY</h5>
+                <h2>Arrizo</h2>
+                <h3>$18.500.000</h3>
+            </div>
+        </div>
+    </div>
+
+  <div class="producto">
+        <div class="contenedor">
+            <img src="{% static 'app/img/productos/toyota.jpg' %}" alt="auto">
+            <div class="detalles">
+                <h5>TOYOTA</h5>
+                <h2>Yaris</h2>
+                <h3>$16.800.000</h3>
+            </div>
+        </div>
+  </div>
+</div>
+
+{% endblock %}
