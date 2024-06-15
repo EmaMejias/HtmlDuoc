@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+
+
+{% block contenido %}
+<form action="" id="formulario_contacto">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <br>
+    <label for="email">Correo Electronico</label>
+    <input type="email" name="email" id="email">
+    <br>
+    <label for="tipo_solicitud">Tipo de Solicitud</label>
+    <select name="tipo_solicitud" id="tipo_solicitud">
+        <option value="">Seleccionar</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="reclamo">Reclamo</option>
+        <option value="consulta">Consulta</option>
+    </select>
+    <br>
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+    <br>
+    <input type="checkbox" name="avisos" id="avisos">
+    <label for="avisos">Desea recibir sugerencias/avisos</label>
+    <br>
+    <input type="reset" value="Limpiar">
+    <button type="button" id="guardar">Guardar</button>
+</form>
+{% endblock %}
