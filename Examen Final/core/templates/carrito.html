@@ -1,0 +1,69 @@
+<div role="alert">
+    {% if messages %}
+    <div class="alert alert-danger">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div role="alert">
+        <table class="table table-bordered alert alert-dark">
+            <thead>
+                <tr scope="row" class="text-center">
+                    <td colspan="4"
+                        style="font-weight: bold; font-size: 18px; color: black; background-color: darkgrey;">CARRITO
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                        style="font-size: 15px; font-weight: bold; color: black; text-align: center; background-color:darkgrey;">
+                        NOMBRE</td>
+                    <td
+                        style="font-size: 15px; font-weight: bold; color: black; text-align: center; background-color: darkgrey">
+                        PRECIO</td>
+                    <td
+                        style="font-size: 15px; font-weight: bold; color: black; text-align: center; background-color: darkgrey">
+                        STOCK</td>
+                    <td
+                        style="font-size: 15px; font-weight: bold; color: black; text-align: center; background-color: darkgrey">
+                        CANTIDAD</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% if request.session.carrito.items %}
+                {% for key, value in request.session.carrito.items %}
+                <tr>
+                    <td style="font-size: 13px; color: white; background-color:darkgrey">{{ value.nombre }}</td>
+                    <td style="font-size: 13px; color: white; background-color: darkgray">{{ value.precio }}</td>
+                    <td style="font-size: 13px; color: white; background-color: darkgrey">{{ value.stock }}</td>
+                    <td style="font-size: 13px; color: white; background-color: darkgrey">
+                        {{ value.cantidad }}
+                        <br>
+                        <a href="{% url 'agregar' value.producto_id %}" class="badge btn btn-primary">+</a>
+                        <a href="{% url 'restar' value.producto_id %}" class="badge btn btn-warning">-</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" style="color: white; background-color: darkgray;">Total :</th>
+                    <td colspan="3" style="color: white; background-color: darkgray;">$ {{value.total}}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="4" style="color: white; background-color: darkgrey">
+                        <div class="alert alert-info text-center" style="font-weight: bold;">Sin Productos</div>
+                    </td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+    <div class="row text-center">
+        <div class="col-6">
+            <a href="{% url 'limpiar_carrito' %}" class="btn btn-success">Limpiar</a>
+        </div>
+        <div class="col-6">
+            <a href="{% url 'generarBoleta' %}" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>

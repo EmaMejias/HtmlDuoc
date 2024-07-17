@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Productos Admin {% endblock %}
+{% block content %}
+    <!--TABLA ENLAZADA A LA BASE DE DATOS DE DJANGO, POSIBLEMENTE LA QUITEMOS-->
+    <main class="container">
+      <h2>Productos Grupo Cero</h2>
+    
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>ID producto</th>
+                  <th>Nombre producto</th>
+                  <th>Descripción del producto</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Categoria</th>
+                  <th>Imagen</th>
+                  <th>Actualizar</th>
+                  <th>Eliminar</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for ve in datos %}
+                  <tr>
+                      <td> <a href="{% url 'detalle' ve.idProducto %}">{{ ve.idProducto}}</a></td>
+                      <td>{{ ve.nombreProducto}}</td>
+                      <td>{{ ve.descripcionProducto}}</td>
+                      <td>{{ ve.precio}}</td>
+                      <td>{{ ve.stock}}</td>
+                      <td>{{ ve.categoria}}</td>
+                      <td><img src="{{ ve.imagen.url}}" style="width: 70px; height: 70px;"></td>
+                      <td><a href="{% url 'modificar' ve.idProducto %} " class="btn btn-warning">Actualizar</a></td>
+                      <td><a href="{% url 'eliminar' ve.idProducto %}" class="btn btn-danger">Eliminar</a></td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+    <a href="{% url 'crear'%}" class="btn btn-success">Crear producto</a>
+    </main>
+    {% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Detalle {% endblock %}
+{% block content %}
+        <main class="container">
+            <h2>Descripción del producto</h2>
+            <div class="row justifity-content-center">
+                <div class="col-md-6">
+                    <div class="card" style="width: 500px; height: 550px;">
+                        <img src="{{ producto.imagen.url }}" class="card-img-top" style="width: 400px; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">ID producto: {{ producto.idProducto}}</h5>
+                            <p class="card-text">Nombre producto: {{ producto.nombreProducto}}</p>
+                            <p class="card-text">Descripcion producto: {{ producto.descripcionProducto}}</p>
+                            <p class="card-text">Precio: {{ producto.precio}}</p>
+                            <p class="card-text">Stock: {{ producto.stock}}</p>
+                            <p class="card-text">Categoria: {{ producto.categoria}}</p>
+
+                            <a href="{% url 'modificar' producto.idProducto %}" class="btn btn-warning">Modificar</a>
+                            <a href="{% url 'eliminar' producto.idProducto %}" class="btn btn-danger">Eliminar</a>
+                            <a href="{% url 'productos_admin'%}" class="btn btn-primary">Volver a productos</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </main>
+{% endblock %}

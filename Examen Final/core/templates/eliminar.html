@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Crear Producto {% endblock %}
+{% block content %}
+
+<main class="container">
+    <h2>Eliminar producto</h2>
+    <div class="row justifity-content-center">
+        <div class="col-md-6">
+            <div class="card" style="width: 550px; height: 300px;">
+                <br>
+                <div class="row">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for=idProducto> Id Producto :</label>
+                            {{ producto.idProducto}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for=nombreProducto> Nombre Producto :</label>
+                            {{ producto.nombreProducto}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for=descripcionProducto> Descripción Producto :</label>
+                            {{ producto.descripcionProducto}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for= precio> Precio :</label>
+                            {{ producto.precio}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for= stock> Stock :</label>
+                            {{ producto.stock}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for= categoria> Categoria :</label>
+                            {{ producto.categoria}}
+                        </div>
+
+                        <div class="form-group">
+                            <label for= imagen> Imagen :</label>
+                            {{ producto.imagen}}
+                        </div>
+                        <br>
+                        <input type="submit" value="Confirmar Eliminación" name ="elimina" class="btn btn-success">    
+                        <a href="{% url 'productos_admin'%}" class="btn btn-primary">Volver a productos</a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

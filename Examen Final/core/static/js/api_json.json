@@ -1,0 +1,40 @@
+{
+    "tienda":[
+        {
+            "id":"1", 
+            "nombre":"La Noche Estrellada",
+            "tipo":"cuadro",
+            "desc":"Replica de la famosa pintura hecha a mano"
+        },
+        {
+            "id":"2", 
+            "nombre":"El David",
+            "tipo":"escultura",
+            "desc":"Replica en miniatura que imita la famosa escultura"
+        },
+        {
+            "id":"3", 
+            "nombre":"Poncho",
+            "tipo":"textil",
+            "desc":"Poncho tejido a mano, perfecto para la epoca de frío"
+        },
+        {
+            "id":"4", 
+            "nombre":"Gorro Chilote",
+            "tipo":"textil",
+            "desc":"Gorro tipico de la zona sureña, muy calentito"
+        },
+        {
+            "id":"5",
+            "nombre":"Trapelacucha",
+            "tipo":"orfebreria",
+            "desc":"Tipica joya Mapuche, hecha de fantasia por experta orfebrera"
+        },
+        {
+            "id":"6",
+            "nombre":"El Grito",
+            "tipo":"cuadro",
+            "desc":"Replica del famoso cuadro, pintado a mano"
+        }
+    ]
+}

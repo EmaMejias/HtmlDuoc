@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block title %} Mision/Vision {% endblock %}
+    {% block content %}   
+
+    <main class="container">
+        <h2>Modificando producto</h2>
+        <br>
+        <div class="row">
+            <form action="#" method="POST" enctype="multipart/form-data" id="formulario">
+
+                {% csrf_token %}
+                <div class="form-group">
+                    <strong>{{ forModificar.idProducto.label}}</strong>
+                    <br>
+                    <strong><p style="color: #ff0000">{{ forModificar.idProducto}}</p></strong>
+                </div>
+
+                <div class="form-group">
+                    {{ forModificar.nombreProducto.label}}
+                    {{ forModificar.nombreProducto}}
+                </div>
+
+                <div class="form-group">
+                    {{ forModificar.descripcionProducto.label}}
+                    {{ forModificar.descripcionProducto}}
+                </div>
+
+                <div class="form-group">
+                    {{ forModificar.precio.label}}
+                    {{ forModificar.precio}}
+                </div>
+
+                <div class="form-group">
+                    {{ forModificar.stock.label}}
+                    {{ forModificar.stock}}
+                    <p id="stock-error" style="color: red; display: none;">El stock no puede ser negativo.</p>
+                </div>
+
+                <div class="form-group">
+                    {{ forModificar.categoria.label}}
+                    {{ forModificar.categoria}}
+                </div>
+
+                
+                {% if producto.imagen %}
+                    <img src="{{producto.imagen.url}}" width="200px">
+                {% else %}
+                    <h4 style="color:red"> Producto sin foto </h4>
+                {% endif %}
+
+                <div class="form-group">
+                    {{ forModificar.imagen.label}}
+                    {{ forModificar.imagen}}
+                </div>
+
+                <br>
+                <input type="submit" value="Modificar" class="btn btn-success"> 
+                <a href="{% url 'productos_admin'%}" class="btn btn-primary">Volver a productos</a>   
+            </form>
+            
+        </div>
+
+
+    </main>
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            const stockField = document.getElementById('{{ forModificar.stock.id_for_label }}');
+            const stockValue = parseInt(stockField.value, 10);
+            const errorField = document.getElementById('stock-error');
+    
+            if (stockValue < 0) {
+                errorField.style.display = 'block';
+                event.preventDefault();  // Prevenir el envío del formulario
+            } else {
+                errorField.style.display = 'none';
+            }
+        });
+    </script>
+    {% endblock %}

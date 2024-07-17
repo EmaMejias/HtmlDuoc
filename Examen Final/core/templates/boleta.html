@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Boleta {% endblock %}
+{% block content %}
+
+<div class="container">
+    <h3>Boleta de compra</h3>
+    <br><h6>Fecha: {{ fecha }}</h6>
+    <h6>Cliente: {{ user.username }}</h6>
+    <h6>Estado: {{ estado }}</h6>
+
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Codigo boleta</th>
+                <th>Codigo producto</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prod in productos %}
+            <tr>
+                <td>{{ id_boleta }}</td>
+                <td>{{ prod.id_producto.idProducto }}</td>
+                <td>{{ prod.cantidad }}</td>
+                <td>{{ prod.subtotal }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Subtotal</td>
+                <td>{{ subtotal }}</td>
+            </tr>
+            <tr>
+                <td colspan="3">Gastos de envío</td>
+                <td>{{ gastos_envio }}</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>{{ total_final }}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+{% endblock %}

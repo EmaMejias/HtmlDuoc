@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Crear Producto {% endblock %}
+{% block content %}
+        <main class="container">
+            <h2>Agregando producto</h2>
+            <br>
+            <div class="row">
+                <form action="#" method="POST" enctype="multipart/form-data" id="formulario">
+
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ productoform.idProducto.label}}
+                        {{ productoform.idProducto}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.nombreProducto.label}}
+                        {{ productoform.nombreProducto}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.descripcionProducto.label}}
+                        {{ productoform.descripcionProducto}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.precio.label}}
+                        {{ productoform.precio}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.stock.label}}
+                        {{ productoform.stock}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.categoria.label}}
+                        {{ productoform.categoria}}
+                    </div>
+
+                    <div class="form-group">
+                        {{ productoform.imagen.label}}
+                        {{ productoform.imagen}}
+                    </div>
+
+                    <br>
+                    <input type="submit" value="Almacenar" class="btn btn-success">
+                    <a href="{% url 'productos_admin'%}" class="btn btn-primary">Volver a Productos</a>    
+                </form>
+
+            </div>
+
+
+        </main>
+    {% endblock %}

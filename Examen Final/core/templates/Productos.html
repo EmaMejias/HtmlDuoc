@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Producto {% endblock %}
+{% block content %}
+<div>
+    <h2>Productos</h2><br>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row" style="padding: 5px 0;">
+                <div class="col-12">
+                    <div class="row">
+                        {% for ve in datos %}
+                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                            <div class="card text-center">
+                                {% if ve.imagen %}
+                                <img src="{{ ve.imagen.url }}" class="card-img-top mx-auto">
+                                {% else %}
+                                <img src="{% static 'imagen/sin_imagen.png' %}" class="card-img-top mx-auto">
+                                {% endif %}
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: bold;">ID: {{ ve.idProducto }}</h5>
+                                    <p class="card-text" style="text-align: left;">
+                                        Nombre: {{ ve.nombreProducto }}
+                                        <br>
+                                        Precio: ${{ ve.precio }}
+                                        <br>
+                                        Stock: {{ ve.stock }}
+                                    </p>
+                                    <a href="{% url 'agregar' ve.idProducto %}" class="btn btn-outline-success">Agregar al carrito</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Paginación -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if datos.has_previous %}
+                        <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo; Primera</a>
+                        <a href="?page={{ datos.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previa</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ datos.number }} of {{ datos.paginator.num_pages }}.
+                    </span>
+
+                    {% if datos.has_next %}
+                        <a href="?page={{ datos.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Siguiente</a>
+                        <a href="?page={{ datos.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Anterior &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="container-fluid">
+                <div class="card" style="border-radius:10px; border-color: black;">
+                    <div class="card-body">
+                        {% include "carrito.html" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

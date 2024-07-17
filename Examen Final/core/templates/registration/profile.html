@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Mi Perfil {% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="row jumbotron" id="qSomos">
+    <div class="col-lg-6 offset-lg-3" style="padding-left: 5%; padding-right: 5%;">
+        <div class="container" style="border: 3px solid green; border-radius:10px;">
+            <h2 style="text-align: center;">Mi Perfil</h2>
+
+            <!-- Datos del Usuario -->
+            <div id="profile_view">
+                <p><strong>Nombre:</strong> {{ request.user.first_name }}</p>
+                <p><strong>Apellido:</strong> {{ request.user.last_name }}</p>
+                <p><strong>Nombre de Usuario:</strong> {{ request.user.username }}</p>
+                <p><strong>Email:</strong> {{ request.user.email }}</p>
+                <a href="{% url 'index'%}" class="btn btn-primary">Volver a Inicio</a>
+                <input type="submit" value="Editar" class="btn btn-danger" style="float: right;"
+                    onclick="toggleEdit(true)">
+                <br>
+                <br>
+                <div class="text-center">
+                    <a href="{% url 'cambiar_password' %}" class="btn btn-warning">Cambiar Contraseña</a>
+                </div>
+                <br>
+            </div>
+
+            <!-- Formulario de Edición -->
+            <div id="profile_edit" style="display: none;">
+                <form method="POST">
+                    {% csrf_token %}
+                    <p><strong>Nombre de Usuario:</strong> {{ user_form.username }}</p>
+                    <p><strong>Nombre:</strong> {{ user_form.first_name }}</p>
+                    <p><strong>Apellido:</strong> {{ user_form.last_name }}</p>
+                    <p><strong>Email:</strong> {{ user_form.email }}</p>
+                    <div class="form-group mt-4 mb-0">
+                        <button type="submit" class="col-md-12 btn btn-danger">Actualizar</button><br><br>
+                    </div>
+                    <button class="col-md-12 btn btn-primary" onclick="toggleEdit(false)"
+                        type="button">Cancelar</button>
+                </form>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+<br>
+{% endblock content %}

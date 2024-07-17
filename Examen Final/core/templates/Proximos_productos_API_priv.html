@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Proximamente {% endblock %}
+{% block content %}
+    <!--Implementando la API  PRIVADA  ---------------------->
+    <div class="container">
+      <hr>
+      <h2>¡Proximamente los tendremos en nuestra tienda!</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <input type="button" value="Mostrar productos" onclick="mostrarProductos()" class="btn btn-success" style="margin-bottom: 15px;">
+        </div>
+        <div class="col-md-4">
+          <select name="tipo" id="tipo" class="form-select" onclick="buscarTipo()" style="margin-bottom: 15px;">
+            <option value="">Seleccione tipo...</option>
+            <option value="cuadro">Cuadro</option>
+            <option value="orfebreria">Orfebreria</option>
+            <option value="textil">Textil</option>
+            <option value="escultura">escultura</option>
+
+          </select>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID producto</th>
+            <th>Nombre del producto</th>
+            <th>Tipo de artesania</th>
+            <th>Descripcion</th>
+          </tr>
+        </thead> 
+        <tbody id="tienda"></tbody>
+      </table>
+    </div>
+    <br>
+    {% endblock %}

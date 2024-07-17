@@ -1,0 +1,44 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %} Sobre Nosotros {% endblock %}
+    {% block content %}    
+    <div class="row jumbotron" id="qSomos">
+        <div class="col-lg-6">
+            <div>
+                <h1> <p style="padding-left: 20px ;">Grupo Cero</p></h1><br>
+                <h2 class="lead" style="color:black; text-align: center; font-size: x-large;"><strong>¿Que es Grupo Cero?</strong></h2>
+                <p style="padding-left: 20px ; text-align: justify;">
+                    Grupo Cero una organizacion formada por diferentes tipos de artistas de varios rincones de la región Metropolitana. </strong> 
+                </p>
+                <p style="padding-left: 20px ; text-align: justify;">
+                    Con Nuestra sede ubicada en Barrio Lastarria, asociados con un Café, buscamos expresar arte de todo tipo de formas.
+                </p>
+                <p style="padding-left: 20px ; text-align: justify;">
+                    La idea de crear nuestra propia pagina web surge gracias al deseo de llevar nuestro arte a todos los rincones del país, e incluso mas allá.
+
+                    Con esto en mente, tambien buscamos una mejor difusion para los artistas que buscan vivir de su propia artesania y encuentran dificultades a la hora de promover sus productos.
+                
+                    En Grupo Cero ya somos capaces de lograr este objetivo en un pequeño sector, y teniendo esto en consideración, encontramos necesario el darnos a conocer masivamente. 
+                </p>
+                <p style="padding-left: 20px ; text-align: justify;">
+                    Viendo el como nuestros integrantes ya se han visto beneficiados del espacio y difusión que conseguimos, tenemos grandes expectativas sobre nuestra organizacion a futuro
+
+                    y creemos que seremos capaces de beneficiar a todo tipo de artista ya no solo en Chile, sino a nivel internacional, logrando así preservar a futuros artistas que busquen dedicarse a los que los apasiona.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img src="{% static 'Imagen/sin_fondo.png' %}" alt="sobre nosotros" class="img-fluid" style="margin-left: auto;">
+        </div>
+      </div>
+    
+    
+    
+<p style="padding-left: 20px ; text-align: justify;"><a href="https://youtu.be/JusNwbJlN5s?si=OzuHdHvTZHhqsiL5" target="_blank" class="button" style="vertical-align:middle; background-color: darkgreen;">
+    <span>Mas Info</span>
+  </a></p>
+    </div>
+
+
+    <br>
+    {% endblock %}

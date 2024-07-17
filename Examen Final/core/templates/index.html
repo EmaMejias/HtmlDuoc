@@ -1,0 +1,105 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %} Inicio {% endblock %}
+    {% block content %} 
+    <br>
+        <main class="container">
+   <!--carrusel-->
+   <div id="tienda" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#tienda" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#tienda" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#tienda" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner" style="border-radius:10%; background-color: #34533e;">
+      <div class="carousel-item active">
+        <img src="{% static 'Imagen/carrusel_4.jpg' %}"  class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'Imagen/carrusel_5.jpg' %}"  class="d-block w-100 ">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'imagen/Carrusel_3.jpg' %}"  class="d-block w-100 ">
+      </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#tienda" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#tienda" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <br>
+  <br>
+  <h2 class="lead" style="color: #34533e"><strong>¡Artesanias de todo tipo!</strong></h2><br>
+    <div class="row">
+      <br>
+      <p style="text-align: justify;line-height:2; font-size: time roman 120% sans-serif; color: rgb(5, 6, 7);">
+        ¡Bienvenidos a la tienda en linea de Grupo Cero!
+
+        Ponemos a su disposición todo tipo de obras hechas a mano por los mejores artistas de la región, asegurando calidad y originalidad en cada pieza.
+
+        Contamos con envío a todo el pais, y proximamente haremos envios internacionales.
+        
+    </p>
+
+  <br>
+  <br>
+
+  <div>
+    <h3 class="lead" style="color: #34533e"><strong>Productos más Vendidos</strong></h3><br>
+    <div class="row">  
+      <br>
+      <br>
+          <div class="row">
+            <div class="col-md">
+              <div class="card" style="border-style: solid; border-width: 5px; background-color: #34533e;">
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <img class="card-img-top" src="{% static 'Imagen/trapelacucha.jpg' %}" alt="Card image" style="height: 250px; width: 380px;">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title" style="color: aliceblue;">Trapelacucha</h4>
+                  <p class="card-text">Orfebreria</p>
+                    <a href="{% url 'productos'%}" class="btn btn-primary" style="text-align: right">Ver Producto</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md">
+              <div class="card" style="border-style: solid; border-width: 5px; background-color: #34533e;">
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <img class="card-img-top" src="{% static 'Imagen/noche_estrellada.jpg' %}" alt="Card image" style="height: 250px; width: 380px;">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title" style="color: aliceblue;">La noche estrellada</h4>
+                  <p class="card-text">Cuadro </p>
+                    <a href="{% url 'productos'%}" class="btn btn-primary">Ver Producto</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card" style="border-style: solid; border-width: 5px; background-color: #34533e;">
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <img class="card-img-top" src="{% static 'Imagen/poncho.jpg' %}" alt="Card image" style="height: 250px; width: 380px;">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title" style="color: aliceblue;">Poncho</h4>
+                  <p class="card-text" >Textil</p>
+                    <a href="{% url 'productos'%}" class="btn btn-primary">Ver Producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  </main> 
+<!-- script para el carrusel--> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<br>
+{% endblock %}

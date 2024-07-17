@@ -1,0 +1,131 @@
+body{
+    background-color: #f0ecec;
+}
+
+.menu{
+    background-color:#a12660;
+    
+   
+}
+/* Estilo de letra para  la barra de navegación */
+.navbar-nav .nav-link {
+    font-family: 'Courier New', Courier, monospace; /* Cambiar la fuente del texto */
+    color: white; /* Cambiar el color del texto */
+    
+}
+ 
+/* Cambiar el color del texto cuando el cursor está encima */
+.navbar-nav .nav-link:hover {
+    color: rgb(1, 37, 22); /* Cambiar el color del texto cuando el cursor está encima */
+}
+.carousel-item img {
+    height: 400px; /* Establece la altura deseada */
+}
+.card{
+    margin-bottom: 20px;
+    padding:5px;
+    border-radius: 8px;
+    border-style: solid; 
+    border-width: 5px; 
+    background-color: #740a3b;
+}
+.card-img-top{
+    height: 250px;
+}
+
+  footer{
+    padding: 20px;
+    color: #c5c5c5;
+    background-color: #212529;
+    height: 280px;
+    margin-top: 20px;
+  }
+  
+footer div p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #888888;
+    padding-top: 5px;
+    line-height: 10px;
+  }
+  
+  #linkFooter{
+    color: #c5c5c5;
+    text-decoration: none;
+  }
+
+  @media (max-width:991px){
+    header label{
+        display: block;
+    }
+    footer{
+      height: 500px
+     
+    }
+   
+  }  
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  cs
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+.contenedor-password{
+  display: inline-flex;
+}
+
+.icon{
+  height: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  a:hover, a:active {
+    background-color: #a12660;
+  }
+
+  formulario{
+    border-color: black;
+    border-style:solid;
+
+
+  }
+
+  .error-control{
+    border:1px solid red;
+  }

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Compras Realizadas{% endblock %}
+{% block content %}
+<div>
+    <h2>Compras Realizadas</h2><br>
+
+    <div class="row">
+        <div class="col-md-12">
+            {% for compra in compras %}
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Número de Boleta: {{ compra.boleta.id_boleta }}</h5>
+                    <p>Fecha de Compra: {{ compra.boleta.fechaCompra }}</p>
+                </div>
+                <div class="card-body">
+                    <h6>Productos Adquiridos:</h6>
+                    <ul>
+                        {% for producto in compra.productos %}
+                        <li>
+                            {{ producto.nombre }} - Cantidad: {{ producto.cantidad }} - Subtotal: ${{ producto.subtotal }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
